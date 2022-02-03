@@ -29,10 +29,15 @@ import sys
 
 def partitionArray(a, n) :
   Min = [0] * n
+  #print(Min)
   Mini = sys.maxsize
+  
   for i in range(n - 1, -1, -1):
+    print(f'{Mini} ,{a[i]}')
     Mini = min(Mini, a[i])
+    #print(Mini)
     Min[i] = Mini
+  print(Min)
   Maxi = -sys.maxsize - 1
   index = -1
   for i in range(n - 1):
@@ -45,6 +50,12 @@ def partitionArray(a, n) :
   else :
     print("NO")
  
-N=int(input())
-arr = list(map(int,input().split()))[:N]
-partitionArray(arr, N)
+N=5
+arr=[5,3,2,7,9]
+print(arr)
+partitionArray(arr,N)
+# N=int(input())
+# arr = list(map(int,input().split()))[:N]
+
+##############################################
+#
