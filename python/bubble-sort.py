@@ -15,10 +15,10 @@ def bubble_sort(A):
                 A[j],A[j+1] = A[j+1],A[j]
                
                 swapped = True
-            
-        if swapped == True:
-            break
-
+        
+            if swapped == True:
+                break
+        print(i)  
     return A
 
 A = [5,1,4,2,8]
