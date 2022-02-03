@@ -54,18 +54,29 @@ Sample Output 2
 
 NO
 """
+"""
 n = int(input())
 r1 = list(input())
 r2 = list(input())
+"""
+
+r1=['0','0','1','1','1']
+r2=['1','1','0','0','0']
+n=len(r1)
 
 for i in range(1, n):
+    print(f'i={i}')
     if r1[i] == '0':
+        #print(r1[i-1],r2[i-1])
         if r1[i-1] == '1' and r2[i-1] == '1':
             r1[i] = '1'
+            print(r1[i])
     if r2[i] == '0':
+        #print(r1[i-1],r2[i-1])
         if r1[i-1] =='1' and r2[i-1] == '1':
             r2[i] = '1'
-
+            print(r1[i])
+print(r1,r2,i)
 if r2[i] == '1':
     print('NO')
 else:
