@@ -38,7 +38,7 @@ def partitionArray(a, n) :
     #print(Mini)
     Min[i] = Mini
   print(Min)
-  Maxi = -sys.maxsize - 1
+  Maxi = -sys.maxsize
   index = -1
   for i in range(n - 1):
     Maxi = max(Maxi, a[i])
