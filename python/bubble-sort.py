@@ -13,14 +13,12 @@ def bubble_sort(A):
         for j in range(0,n-1):
             if A[j] > A[j+1]:
                 A[j],A[j+1] = A[j+1],A[j]
-               
                 swapped = True
-        
-            if swapped == True:
-                break
-        print(i)  
+              
+        if  swapped==False:
+            break
     return A
 
-A = [5,1,4,2,8]
+A = [5,4,3,2,1]
 
 print(bubble_sort(A))   
