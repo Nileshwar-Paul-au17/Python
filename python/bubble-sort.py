@@ -17,6 +17,7 @@ def bubble_sort(A):
             if A[j] > A[j+1]:
                 A[j],A[j+1] = A[j+1],A[j]
                 swapped = True
+<<<<<<< HEAD
                 if(i==0):
 
                     print(A)
@@ -24,4 +25,13 @@ def bubble_sort(A):
        
     return A
 A = [5,3,1,9,8,2,4,7]
+=======
+              
+        if  swapped==False:
+            break
+    return A
+
+A = [5,4,3,2,1]
+
+>>>>>>> b15fe456487378041a3c5e9ca28e5da45dfc7335
 print(bubble_sort(A))   
