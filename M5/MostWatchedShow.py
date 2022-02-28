@@ -30,27 +30,43 @@ Sample Output 0
 logan topgun
 
 '''
-def arrayA(arrB):
-        dicti = {}
-        ans = []
-        arrB.sort()
-        for n in arrB:
-            if (n//2, n) in dicti:
-                if dicti[(n//2, n)] > 1:
-                    dicti[(n//2, n)]-=1
-                    ans.append(n//2)
-                else:
-                    dicti.pop((n//2, n))
-                    ans.append(n//2)
-            else:
-                dicti[(n, n*2)] = dicti.get((n, n*2), 0) + 1
-        if dicti:
-            return []
-        else:
-            return ans
+def mostWatched(N,K,A,B):
+    
+    res = []
+    
+    while len(res) < K :
+        
+        Max = float('-inf')
+        
+        idx = 0
+        for i in range (len(B)):
+            
+            if B[i] > Max :
+                
+                Max = B[i]
+                
+                idx = i
+                
+                
+        res.append(A[idx])
+        
+        A.pop(idx)
+        
+        B.pop(idx)
+        
+    
+    res.sort()
+    
+    res = ' '.join(map(str, res))
+    
+    return res
 
-n = int(input())
-arrB = list(map(int,input().split()))
-arrA = arrayA(arrB)
-for i in arrA:
-    print(i,end=" ")
+
+
+N , K = map(int, input().split())
+
+A = list(map(str, input().split()))
+
+B = list(map(int, input().split()))
+
+print(mostWatched(N,K,A,B))
