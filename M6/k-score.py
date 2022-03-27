@@ -40,13 +40,15 @@ The minimum possible difference is 2.
 
 ***********************////////\\\\\\\\\***********************************
 
-Refrence:-https://www.geeksforgeeks.org/chocolate-distribution-problem/
+Refrence:-https://www.geeksforgeeks.org/k-numbers-difference-maximum-minimum-k-number-minimized/
+
+'''
 '''
 n, k = input().split()
-N = int(n)
-K = int(k)
+N = 4
+K = 2
 
-arr = list(map(int,input().split()))
+arr = [9,4,1,7]
 
 def minimumDiff( nums, k):
 
@@ -55,9 +57,32 @@ def minimumDiff( nums, k):
 
     for i in range(k, len(nums)):
         res = min(res, nums[i] - nums[i - k + 1])
+        print(res)
 
     return res
 
     
 
+
 print(minimumDiff(arr,K))
+'''
+def minDiff(arr,n,k):
+    result = +2147483647
+  
+    # Sorting the array.
+    arr.sort()
+  
+    # Find minimum value among
+    # all K size subarray.
+    for i in range(n-k+1):
+        result = int(min(result, arr[i+k-1] - arr[i]))
+  
+    return result
+ 
+# Driver code
+ 
+arr= [10, 100, 300, 200, 1000, 20, 30]
+n =len(arr)
+k = 3
+  
+print(minDiff(arr, n, k))
