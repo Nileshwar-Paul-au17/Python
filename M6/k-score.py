@@ -67,7 +67,7 @@ def minimumDiff( nums, k):
 print(minimumDiff(arr,K))
 '''
 def minDiff(arr,n,k):
-    result = +2147483647
+    result = float('inf')
   
     # Sorting the array.
     arr.sort()
